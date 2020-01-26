@@ -3,6 +3,8 @@ import { selectStuff } from '../../selectors';
 // babel-loader gives us ability to use imports
 
 function doWork(resolveKey, cb) {
+	// we can't put anything generic here. callback instead of selectStuff won't work:
+	// https://stackoverflow.com/questions/53518607/nodejs-datacloneerror-function-native-code-could-not-be-cloned
 	let result = selectStuff(resolveKey),
 		err = null;
 

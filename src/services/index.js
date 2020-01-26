@@ -1,2 +1,2 @@
-export * from './do-stuff';
-export * from './worker-wrapper';
+export * from './do-long-stuff';
+export * from './promise-worker';
