@@ -1,6 +1,4 @@
-import './styles.css';
-import './styles.scss';
-import './styles.less';
+import './styles/styles.less';
 import { promiseWorker } from './services';
 import SelectStuffWorker from './services/workers/select.worker'; // gotta use webpack worker-loader for this
 
@@ -8,7 +6,7 @@ import SelectStuffWorker from './services/workers/select.worker'; // gotta use w
 const worker = new SelectStuffWorker();
 const resolveKey = '$Vasya_key_42';
 
-console.log('Calling');
+console.log('Calling worker');
 
 // wrapper service gives promises when worker is done or threw error
 promiseWorker(worker, resolveKey)
